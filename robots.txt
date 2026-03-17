@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joo231.github.io/vladivostok-guide/sitemap.xml
+

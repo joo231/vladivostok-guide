@@ -3,12 +3,61 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Красивый путеводитель по Владивостоку: маршруты, места, еда, советы и интерактивный план на день." />
-    <title>Владивосток — путеводитель</title>
+    <meta name="description" content="Путеводитель по Владивостоку: лучшие виды, набережные, маяки, Русский остров, маршруты на 1 день и интерактивный план поездки." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#070A12" />
+    <meta name="author" content="Vladivostok Guide" />
+
+    <title>Путеводитель по Владивостоку — маршруты, места, еда и план на день</title>
+
+    <link rel="canonical" href="https://joo231.github.io/vladivostok-guide/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:title" content="Путеводитель по Владивостоку — маршруты и лучшие места" />
+    <meta property="og:description" content="Маршруты на 1 день, лучшие виды, море, маяки и практичные советы. Соберите план на день прямо на сайте." />
+    <meta property="og:url" content="https://joo231.github.io/vladivostok-guide/" />
+    <meta property="og:site_name" content="Владивосток — путеводитель" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Путеводитель по Владивостоку — маршруты и лучшие места" />
+    <meta name="twitter:description" content="Маршруты на 1 день, лучшие виды, море, маяки и практичные советы." />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Владивосток — путеводитель",
+        "url": "https://joo231.github.io/vladivostok-guide/",
+        "inLanguage": "ru-RU",
+        "description": "Путеводитель по Владивостоку: маршруты, места, еда и интерактивный план на день.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Vladivostok Guide"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristDestination",
+        "name": "Владивосток",
+        "url": "https://joo231.github.io/vladivostok-guide/",
+        "description": "Город у Тихого океана: мосты, сопки, набережные и маршруты на 1 день.",
+        "touristType": ["городской туризм", "морские прогулки", "смотровые площадки"],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.1155,
+          "longitude": 131.8855
+        }
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#content">Перейти к содержимому</a>
@@ -24,11 +73,11 @@
         </a>
 
         <nav class="nav" aria-label="Основная навигация">
-          <a href="#routes">Маршруты</a>
-          <a href="#places">Места</a>
-          <a href="#food">Еда</a>
-          <a href="#tips">Советы</a>
-          <a class="nav__cta" href="#planner">План на день</a>
+          <a href="./routes.html">Маршруты</a>
+          <a href="./places.html">Места</a>
+          <a href="./food.html">Еда</a>
+          <a href="./tips.html">Советы</a>
+          <a class="nav__cta" href="./planner.html">План на день</a>
         </nav>
 
         <button class="iconbtn" type="button" id="menuBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
@@ -38,11 +87,11 @@
 
       <div class="mobileNav" id="mobileNav" hidden>
         <div class="container mobileNav__inner">
-          <a href="#routes">Маршруты</a>
-          <a href="#places">Места</a>
-          <a href="#food">Еда</a>
-          <a href="#tips">Советы</a>
-          <a class="nav__cta" href="#planner">План на день</a>
+          <a href="./routes.html">Маршруты</a>
+          <a href="./places.html">Места</a>
+          <a href="./food.html">Еда</a>
+          <a href="./tips.html">Советы</a>
+          <a class="nav__cta" href="./planner.html">План на день</a>
         </div>
       </div>
     </header>
@@ -118,6 +167,16 @@
         <div class="waves" aria-hidden="true"></div>
       </section>
 
+      <aside class="adWrap" aria-label="Реклама">
+        <div class="container">
+          <!-- РСЯ (Яндекс) место под рекламу: сюда позже вставляется код блока, без изменений разметки страницы -->
+          <div class="adSlot" id="ad-top" data-ad-provider="rsya" data-ad-slot="top" role="complementary" aria-label="Рекламный блок">
+            <div class="adSlot__label" aria-hidden="true">Реклама</div>
+            <div class="adSlot__body">Место для рекламного блока (РСЯ)</div>
+          </div>
+        </div>
+      </aside>
+
       <section class="section" id="routes">
         <div class="container">
           <div class="section__head">
@@ -180,6 +239,16 @@
           <div class="places" id="placesGrid" aria-live="polite"></div>
         </div>
       </section>
+
+      <aside class="adWrap adWrap--tight" aria-label="Реклама">
+        <div class="container">
+          <!-- РСЯ (Яндекс) место под рекламу: можно использовать для in-article блока -->
+          <div class="adSlot adSlot--wide" id="ad-middle" data-ad-provider="rsya" data-ad-slot="middle" role="complementary" aria-label="Рекламный блок">
+            <div class="adSlot__label" aria-hidden="true">Реклама</div>
+            <div class="adSlot__body">Место для рекламного блока (РСЯ)</div>
+          </div>
+        </div>
+      </aside>
 
       <section class="section" id="food">
         <div class="container">

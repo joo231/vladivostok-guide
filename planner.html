@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Соберите план на день во Владивостоке: выберите темп и интересы, получите маршрут с остановками и таймингом." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#070A12" />
+
+    <title>План на день во Владивостоке — генератор маршрута</title>
+    <link rel="canonical" href="https://joo231.github.io/vladivostok-guide/planner.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:title" content="План на день во Владивостоке" />
+    <meta property="og:description" content="Выберите темп и интересы — получите маршрут с остановками и ориентировочным временем." />
+    <meta property="og:url" content="https://joo231.github.io/vladivostok-guide/planner.html" />
+    <meta property="og:site_name" content="Владивосток — путеводитель" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "План на день во Владивостоке",
+        "url": "https://joo231.github.io/vladivostok-guide/planner.html",
+        "inLanguage": "ru-RU",
+        "isPartOf": { "@type": "WebSite", "name": "Владивосток — путеводитель", "url": "https://joo231.github.io/vladivostok-guide/" }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Перейти к содержимому</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="./">
+          <span class="brand__mark" aria-hidden="true">ВЛД</span>
+          <span class="brand__text">
+            <span class="brand__title">Владивосток</span>
+            <span class="brand__subtitle">путеводитель</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="./">Главная</a>
+          <a href="./routes.html">Маршруты</a>
+          <a href="./places.html">Места</a>
+          <a href="./food.html">Еда</a>
+          <a href="./tips.html">Советы</a>
+          <a class="nav__cta" href="./planner.html" aria-current="page">План на день</a>
+        </nav>
+
+        <button class="iconbtn" type="button" id="menuBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
+          <span class="iconbtn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="mobileNav" id="mobileNav" hidden>
+        <div class="container mobileNav__inner">
+          <a href="./">Главная</a>
+          <a href="./routes.html">Маршруты</a>
+          <a href="./places.html">Места</a>
+          <a href="./food.html">Еда</a>
+          <a href="./tips.html">Советы</a>
+          <a class="nav__cta" href="./planner.html" aria-current="page">План на день</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="section section--alt" id="planner">
+        <div class="container">
+          <div class="section__head">
+            <h1 class="section__title">План на день</h1>
+            <p class="section__lead">Выберите темп и интересы — получите компактный маршрут. Можно добавлять места со страницы “Места”.</p>
+          </div>
+
+          <div class="planner">
+            <form class="planner__form" id="planForm">
+              <div class="field">
+                <label class="label" for="pace">Темп</label>
+                <select id="pace" class="select">
+                  <option value="easy">Лёгкий (меньше перемещений)</option>
+                  <option value="normal" selected>Нормальный</option>
+                  <option value="active">Активный (максимум видов)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <span class="label">Интересы</span>
+                <div class="toggles">
+                  <label class="toggle"><input type="checkbox" name="interest" value="views" checked /><span>Виды</span></label>
+                  <label class="toggle"><input type="checkbox" name="interest" value="sea" checked /><span>Море</span></label>
+                  <label class="toggle"><input type="checkbox" name="interest" value="city" checked /><span>Центр</span></label>
+                  <label class="toggle"><input type="checkbox" name="interest" value="history" /><span>История</span></label>
+                  <label class="toggle"><input type="checkbox" name="interest" value="food" checked /><span>Еда</span></label>
+                </div>
+              </div>
+
+              <div class="planner__actions">
+                <button class="btn btn--primary" type="submit">Собрать маршрут</button>
+                <button class="btn btn--ghost" type="button" id="shuffleBtn">Случайный</button>
+              </div>
+
+              <p class="muted">Подсказка: если хотите красивый финал — ставьте последнюю точку ближе к воде под закат.</p>
+            </form>
+
+            <div class="planner__result">
+              <div class="result" id="planResult" aria-live="polite">
+                <div class="result__empty">
+                  <div class="result__emoji" aria-hidden="true">⟂</div>
+                  <div>
+                    <div class="result__title">Маршрут появится здесь</div>
+                    <div class="result__text">Нажмите “Собрать маршрут” — и получите план с остановками и ориентировочным временем.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="adWrap" aria-label="Реклама">
+        <div class="container">
+          <div class="adSlot" id="ad-planner" data-ad-provider="rsya" data-ad-slot="planner" role="complementary" aria-label="Рекламный блок">
+            <div class="adSlot__label" aria-hidden="true">Реклама</div>
+            <div class="adSlot__body">Место для рекламного блока (РСЯ)</div>
+          </div>
+        </div>
+      </aside>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__left">
+            <div class="brand brand--footer">
+              <span class="brand__mark" aria-hidden="true">ВЛД</span>
+              <span class="brand__text">
+                <span class="brand__title">Владивосток</span>
+                <span class="brand__subtitle">путеводитель</span>
+              </span>
+            </div>
+            <p class="muted">Маршрут можно скопировать и отправить себе в заметки.</p>
+          </div>
+
+          <div class="footer__right">
+            <a class="link" href="#content">Наверх</a>
+            <button class="link" type="button" id="copyLinkBtn">Скопировать ссылку</button>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
