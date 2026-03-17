@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Красивый путеводитель по Владивостоку: маршруты, места, еда, советы и интерактивный план на день." />
+    <title>Владивосток — путеводитель</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Перейти к содержимому</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="./">
+          <span class="brand__mark" aria-hidden="true">ВЛД</span>
+          <span class="brand__text">
+            <span class="brand__title">Владивосток</span>
+            <span class="brand__subtitle">путеводитель</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="#routes">Маршруты</a>
+          <a href="#places">Места</a>
+          <a href="#food">Еда</a>
+          <a href="#tips">Советы</a>
+          <a class="nav__cta" href="#planner">План на день</a>
+        </nav>
+
+        <button class="iconbtn" type="button" id="menuBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
+          <span class="iconbtn__bars" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="mobileNav" id="mobileNav" hidden>
+        <div class="container mobileNav__inner">
+          <a href="#routes">Маршруты</a>
+          <a href="#places">Места</a>
+          <a href="#food">Еда</a>
+          <a href="#tips">Советы</a>
+          <a class="nav__cta" href="#planner">План на день</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="pill">
+              <span class="pill__dot" aria-hidden="true"></span>
+              Море, мосты и сопки — за один день
+            </p>
+            <h1 class="hero__title">Владивосток — город, который смотрит на Тихий океан</h1>
+            <p class="hero__lead">
+              Красивый и практичный путеводитель: лучшие виды, прогулки, маяки, кафе с морепродуктами и короткие маршруты,
+              которые реально пройти.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#planner">Собрать план на день</a>
+              <a class="btn btn--ghost" href="#places">Выбрать места</a>
+            </div>
+
+            <div class="stats" role="list" aria-label="Коротко о городе">
+              <div class="stat" role="listitem">
+                <div class="stat__k">2</div>
+                <div class="stat__v">главных моста</div>
+              </div>
+              <div class="stat" role="listitem">
+                <div class="stat__k">∞</div>
+                <div class="stat__v">видов с сопок</div>
+              </div>
+              <div class="stat" role="listitem">
+                <div class="stat__k">1</div>
+                <div class="stat__v">океан рядом</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__card" aria-label="Карта-заметка">
+            <div class="heroCard">
+              <div class="heroCard__top">
+                <div class="heroCard__badge">С чего начать</div>
+                <div class="heroCard__title">Набережная Цесаревича → Токаревский маяк</div>
+                <div class="heroCard__meta">закат • прогулка • фото</div>
+              </div>
+              <div class="heroCard__map" aria-hidden="true">
+                <div class="mapLine"></div>
+                <div class="mapPins">
+                  <span class="pin pin--a"></span>
+                  <span class="pin pin--b"></span>
+                  <span class="pin pin--c"></span>
+                </div>
+              </div>
+              <div class="heroCard__bottom">
+                <div class="mini">
+                  <div class="mini__k">Время</div>
+                  <div class="mini__v">2–3 часа</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Темп</div>
+                  <div class="mini__v">лёгкий</div>
+                </div>
+                <div class="mini">
+                  <div class="mini__k">Транспорт</div>
+                  <div class="mini__v">пешком/такси</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="waves" aria-hidden="true"></div>
+      </section>
+
+      <section class="section" id="routes">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Маршруты</h2>
+            <p class="section__lead">Выбирайте по времени и настроению. Маршруты построены так, чтобы успеть и виды, и еду.</p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card">
+              <h3 class="card__title">Виды и мосты (4–6 часов)</h3>
+              <p class="card__text">Сопка Орлиное гнездо → центр → закат у моря. Лучший вариант для первого дня.</p>
+              <ul class="card__list">
+                <li>Орлиное гнездо</li>
+                <li>Центр и улица Светланская</li>
+                <li>Токаревский маяк</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Морская прогулка (3–5 часов)</h3>
+              <p class="card__text">Набережные и короткая вылазка к маяку, плюс кофе с видом на бухту.</p>
+              <ul class="card__list">
+                <li>Набережная Цесаревича</li>
+                <li>Спортивная набережная</li>
+                <li>Маяк Токаревского</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3 class="card__title">Островной день (весь день)</h3>
+              <p class="card__text">Русский остров: океан, ветер и простор. Берите слой одежды и воду.</p>
+              <ul class="card__list">
+                <li>Русский остров</li>
+                <li>Форты / смотровые</li>
+                <li>Пляжи (по сезону)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="places">
+        <div class="container">
+          <div class="section__head section__head--row">
+            <div>
+              <h2 class="section__title">Места</h2>
+              <p class="section__lead">Фильтруйте под себя: виды, море, история, “быстро и красиво”.</p>
+            </div>
+
+            <div class="chips" role="group" aria-label="Фильтры мест">
+              <button class="chip is-active" type="button" data-filter="all">Все</button>
+              <button class="chip" type="button" data-filter="views">Виды</button>
+              <button class="chip" type="button" data-filter="sea">Море</button>
+              <button class="chip" type="button" data-filter="city">Центр</button>
+              <button class="chip" type="button" data-filter="history">История</button>
+              <button class="chip" type="button" data-filter="quick">Быстро</button>
+            </div>
+          </div>
+
+          <div class="places" id="placesGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section" id="food">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Еда</h2>
+            <p class="section__lead">Владивосток — про морепродукты и азиатские вкусы. Ниже — что пробовать и как выбирать.</p>
+          </div>
+
+          <div class="grid grid--2">
+            <article class="card card--soft">
+              <h3 class="card__title">Что попробовать</h3>
+              <div class="tags">
+                <span class="tag">гребешок</span>
+                <span class="tag">краб</span>
+                <span class="tag">морской ёж</span>
+                <span class="tag">ухо/рамен</span>
+                <span class="tag">кофе с видом</span>
+              </div>
+              <p class="card__text">
+                Самый приятный сценарий — дневная прогулка и ужин у моря. В центре много хороших мест, а на набережных —
+                идеальные закаты.
+              </p>
+            </article>
+
+            <article class="card card--soft">
+              <h3 class="card__title">Как не промахнуться</h3>
+              <ul class="checklist">
+                <li>Смотрите на сезонность морепродуктов и улов.</li>
+                <li>Бронируйте популярные места в выходные.</li>
+                <li>Берите “половинку” порции, если хотите попробовать всё.</li>
+                <li>На ветру чай/кофе — идеальная пауза между локациями.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="planner">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">План на день</h2>
+            <p class="section__lead">Выберите темп и интересы — сайт соберёт компактный маршрут с подсказками по времени.</p>
+          </div>
+
+          <div class="planner">
+            <form class="planner__form" id="planForm">
+              <div class="field">
+                <label class="label" for="pace">Темп</label>
+                <select id="pace" class="select">
+                  <option value="easy">Лёгкий (меньше перемещений)</option>
+                  <option value="normal" selected>Нормальный</option>
+                  <option value="active">Активный (максимум видов)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <span class="label">Интересы</span>
+                <div class="toggles">
+                  <label class="toggle"><input type="checkbox" name="interest" value="views" checked /><span>Виды</span></label>
+                  <label class="toggle"><input type="checkbox" name="interest" value="sea" checked /><span>Море</span></label>
+                  <label class="toggle"><input type="checkbox" name="interest" value="city" checked /><span>Центр</span></label>
+                  <label class="toggle"><input type="checkbox" name="interest" value="history" /><span>История</span></label>
+                  <label class="toggle"><input type="checkbox" name="interest" value="food" checked /><span>Еда</span></label>
+                </div>
+              </div>
+
+              <div class="planner__actions">
+                <button class="btn btn--primary" type="submit">Собрать маршрут</button>
+                <button class="btn btn--ghost" type="button" id="shuffleBtn">Случайный</button>
+              </div>
+
+              <p class="muted">
+                Подсказка: Владивосток ветреный. Даже летом пригодится лёгкая куртка, особенно у моря.
+              </p>
+            </form>
+
+            <div class="planner__result">
+              <div class="result" id="planResult" aria-live="polite">
+                <div class="result__empty">
+                  <div class="result__emoji" aria-hidden="true">⟂</div>
+                  <div>
+                    <div class="result__title">Маршрут появится здесь</div>
+                    <div class="result__text">Нажмите “Собрать маршрут” — и получите план с остановками и ориентировочным временем.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tips">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Советы</h2>
+            <p class="section__lead">Коротко и по делу: погода, транспорт, деньги, безопасность и что взять с собой.</p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card card--note">
+              <h3 class="card__title">Погода и ветер</h3>
+              <p class="card__text">Ветер у моря — норма. Одевайтесь слоями и не игнорируйте прогноз тумана.</p>
+            </article>
+            <article class="card card--note">
+              <h3 class="card__title">Транспорт</h3>
+              <p class="card__text">Такси удобно между сопками. Пешком — отлично по центру и набережным.</p>
+            </article>
+            <article class="card card--note">
+              <h3 class="card__title">Фото-точки</h3>
+              <p class="card__text">Лучший свет — утром и на закате. Сопки + мосты = гарантированный кадр.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="footer__left">
+            <div class="brand brand--footer">
+              <span class="brand__mark" aria-hidden="true">ВЛД</span>
+              <span class="brand__text">
+                <span class="brand__title">Владивосток</span>
+                <span class="brand__subtitle">путеводитель</span>
+              </span>
+            </div>
+            <p class="muted">Сайт статический — идеально для GitHub Pages.</p>
+          </div>
+
+          <div class="footer__right">
+            <a class="link" href="#content">Наверх</a>
+            <button class="link" type="button" id="copyLinkBtn">Скопировать ссылку на сайт</button>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
